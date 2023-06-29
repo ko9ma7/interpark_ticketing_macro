@@ -22,10 +22,7 @@ class App:
         self.password_label.grid(row=1, column=0, sticky=E)
 
         self.password_entry = Entry(self.root, show="*", font=self.label_font)
-        self.password_entry.grid(row=1, column=1, pady=5, padx=10, sticky=W)
-
-        self.separator_frame1 = Frame(self.root, bg="black", height=2)
-        self.separator_frame1.grid(row=2, column=0, columnspan=2, pady=10, sticky="we")
+        self.password_entry.grid(row=1, column=1, pady=(5,20), padx=10, sticky=W)
 
         self.performance_code_label = Label(self.root, text="공연코드", font=self.label_font, bg=bgcolor)
         self.performance_code_label.grid(row=3, column=0, sticky=E)
