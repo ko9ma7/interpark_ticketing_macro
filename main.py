@@ -1,5 +1,5 @@
 from tkinter import *
-
+import pyautogui
 
 class App:
     def __init__(self, root):
@@ -7,18 +7,18 @@ class App:
         self.root = root
         self.root.title("인터파크 티켓팅 매크로")
         self.root.iconbitmap('macro.ico')
-        self.root.geometry("800x600")
+        self.root.geometry("900x500")
         self.root.configure(bg=bgcolor)  # 배경색 설정
 
         self.label_font = ("KIMM_bold", 12)  # 폰트 설정
 
-        self.username_label = Label(self.root, text="아이디", font=self.label_font, bg=bgcolor)  # 폰트와 배경색 설정
+        self.username_label = Label(self.root, text="아이디", font=self.label_font, bg=bgcolor)
         self.username_label.grid(row=0, column=0, sticky=E)
 
         self.username_entry = Entry(self.root, font=self.label_font)
         self.username_entry.grid(row=0, column=1, pady=5, padx=10, sticky=W)
 
-        self.password_label = Label(self.root, text="비밀번호", font=self.label_font, bg=bgcolor)  # 폰트와 배경색 설정
+        self.password_label = Label(self.root, text="비밀번호", font=self.label_font, bg=bgcolor)
         self.password_label.grid(row=1, column=0, sticky=E)
 
         self.password_entry = Entry(self.root, show="*", font=self.label_font)
@@ -48,7 +48,7 @@ class App:
         self.gate_address_entry = Entry(self.root, font=self.label_font)
         self.gate_address_entry.grid(row=6, column=1, pady=5, padx=10, sticky=W)
 
-        self.seat_label = Label(self.root, text="좌석수", font=self.label_font, bg=bgcolor)  # 폰트와 배경색 설정
+        self.seat_label = Label(self.root, text="좌석수", font=self.label_font, bg=bgcolor)
         self.seat_label.grid(row=0, column=2, padx=150, sticky=W)
 
         self.seat_value = StringVar()
@@ -108,7 +108,7 @@ class App:
 
     def run_macro(self):
         # 실행 버튼이 눌렸을 때 수행할 동작
-        print("매크로 실행")
+        pyautogui.alert('매크로 실행됨')
 
 
 root = Tk()
